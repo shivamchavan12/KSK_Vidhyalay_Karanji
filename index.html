@@ -110,7 +110,44 @@ nav.sticky {
     transform: translateY(0);
   }
 }
+.teacher-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
+    .teacher-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .teacher-img {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        border: 4px solid #dc2626;
+        margin-bottom: 1rem;
+    }
+
+    .teacher-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.5rem;
+    }
+
+    .teacher-qualification,
+    .teacher-role,
+    .teacher-award {
+        font-size: 0.875rem;
+        color: #4b5563;
+        margin-bottom: 0.25rem;
+    }
     </style>
 </head>
 <body class="bg-yellow-50 text-gray-900 font-sans">
@@ -149,7 +186,7 @@ nav.sticky {
     <div class="hidden lg:flex justify-center space-x-8 mt-1"> <!-- Hide on mobile, show on desktop -->
         <a href="#about" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">आमच्याबद्दल</a>
         <a href="#gallery" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">गॅलरी</a>
-        <a href="#principal" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">प्राचार्यांचे विचार</a>
+        <a href="#principal" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">प्रेरणा स्थान</a>
         <a href="#facilities" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">वैशिष्ठे</a>
         <a href="#staff" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">स्टाफ</a>
         <a href="#committee" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">स्कूल कमिटी</a>
@@ -167,7 +204,7 @@ nav.sticky {
     <div id="mobile-menu" class="hidden bg-red-600 text-white p-4 space-y-4 shadow-lg">
         <a href="#about" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">आमच्याबद्दल</a>
         <a href="#gallery" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">गॅलरी</a>
-        <a href="#principal" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">प्राचार्यांचे विचार</a>
+        <a href="#principal" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">प्रेरणा स्थान</a>
         <a href="#facilities" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">वैशिष्ठे</a>
         <a href="#staff" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">स्टाफ</a>
         <a href="#committee" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">स्कूल कमिटी</a>
@@ -197,7 +234,8 @@ nav.sticky {
 <section id="about" class="py-12 px-6 bg-yellow-50">
     <div class="max-w-7xl mx-auto fade-in">
         <h3 class="text-3xl font-bold text-center text-red-600 mb-8" data-aos="fade-up">आमच्याबद्दल</h3>
-        <p class="text-lg text-gray-700 text-center mb-12" data-aos="fade-up" data-aos-delay="200">रयत शिक्षण संस्थेच्या माध्यमिक शाळेत विद्यार्थ्यांसाठी उत्कृष्ट सुविधांची सोय आहे. शाळेत प्रशस्त वर्गखोल्या, अद्ययावत संगणक लॅब, सायन्स लॅब, व प्रेरणादायी पुस्तकांनी समृद्ध ग्रंथालय उपलब्ध आहे. विद्यार्थ्यांच्या खेळाच्या आवडीला प्रोत्साहन देण्यासाठी विस्तृत क्रीडांगण आणि क्रीडा सुविधा आहेत. तसेच, शाळा विद्यार्थ्यांच्या व्यक्तिमत्त्व विकासासाठी विविध सांस्कृतिक आणि शैक्षणिक उपक्रमांचे आयोजन करते.शाळेचे ध्येय विद्यार्थ्यांना गुणवत्तापूर्ण शिक्षणासोबत नैतिक मूल्यांचे शिक्षण देऊन त्यांना शिस्तबद्ध आणि जबाबदार नागरिक घडवणे हे आहे. या शिक्षणाद्वारे स्वावलंबन, श्रमप्रतिष्ठा आणि समाजसेवेचे महत्त्व रुजवणे शाळेचा मुख्य उद्देश आहे.प्रत्येक विद्यार्थ्याच्या सर्वांगीण विकासासाठी वचनबद्ध असलेल्या या शाळेत सुरक्षित परिसर आणि शुद्ध पाण्याची सोयही आहे. शाळेचा दृष्टिकोन समाजाच्या प्रगतीत योगदान देणाऱ्या शिक्षित आणि आदर्श व्यक्तिमत्त्वांचा विकास करणे हा आहे.</p>
+        <p class="text-lg text-gray-700 text-center mb-12" data-aos="fade-up" data-aos-delay="200">रयत शिक्षण संस्थेच्या माध्यमिक शाळेतील विद्यार्थ्यांसाठी उत्कृष्ट सुविधांची व प्रगतीशील शालेय वातावरणाची सोय करण्यात आली आहे. आमच्या शाळेत प्रशस्त व सुसज्ज वर्गखोल्या, अत्याधुनिक संगणक लॅब, आणि विद्यार्थ्यांच्या खेळाच्या आवडीला प्रोत्साहन देण्यासाठी विस्तृत क्रीडांगण व उत्कृष्ट क्रीडा सुविधा उपलब्ध आहेत. शाळेने विद्यार्थ्यांच्या सर्वांगीण विकासासाठी विविध सांस्कृतिक, शैक्षणिक, तसेच शारीरिक उपक्रमांचे आयोजन केले जाते. विद्यार्थ्यांना शाळेत सुसंस्कृत व नैतिक शिक्षण देऊन त्यांना समाजाच्या विकासासाठी जबाबदार नागरिक म्हणून घडवणे हे शाळेचे मुख्य ध्येय आहे.
+            शाळेतील शिक्षण केवळ शैक्षणिक ज्ञानावर आधारित नसून, स्वावलंबन, श्रमप्रतिष्ठा आणि समाजसेवेचे महत्त्व देखील विद्यार्थ्यांमध्ये रुजवले जाते. यासाठी विविध कार्यशाळा, संवाद सत्रे आणि प्रेरणादायक उपक्रम राबवले जातात. विद्यार्थ्यांना आपल्या कल्पकतेला वाव देण्यासाठी शाळेतील सर्व सुविधा त्यांच्यासाठी खुल्या आहेत, जेणेकरून ते त्यांच्या शिक्षणाच्या प्रवासात उत्कृष्टतेकडे वळतील. शाळेचा दृष्टिकोन शिक्षणाबरोबरच विद्यार्थ्यांमध्ये आदर्श व्यक्तिमत्त्व निर्माण करण्याचा आहे, जे समाजातील सकारात्मक बदलांसाठी पुढाकार घेतील.</p>
     </div>
 </section>
 
@@ -242,52 +280,28 @@ nav.sticky {
 </section>
 
 
-<!-- Principal Section -->
-<section id="principal" class="py-12 px-6 bg-gray-100" data-aos="fade-up" data-aos-duration="1200">
-    <div class="max-w-7xl mx-auto text-center mb-12">
-        <h2 class="text-3xl font-bold text-red-600 mb-4">प्राचार्यांचा संदेश</h2>
-        <p class="text-lg text-gray-700">Here is a message from our respected Principal.</p>
-    </div>
-
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 px-4">
-        <!-- Principal's Image -->
-        <div class="flex justify-center mb-8 lg:mb-0" animate-fade-in">
-            <img src="HM.jpg" alt="Principal" class="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full border-4 border-red-500 shadow-lg">
-        </div>
-
-        <!-- Principal's Message -->
-        <div class="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2" data-aos="fade-left" data-aos-duration="1200">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">आमच्या प्राचार्यांचे विचार</h3>
-            <p class="text-lg text-gray-700">
-                "माझ्या विद्यालयातील प्रत्येक विद्यार्थी ही आमच्या संस्थेची खरी संपत्ती आहे. त्यांना एक चांगला नागरिक, कुशल व्यक्तिमत्व आणि समाजाच्या भल्यासाठी कार्य करणारा बनवण्याचा आमचा प्रयत्न असतो. शिक्षण केवळ ज्ञान प्राप्तीचे माध्यम नाही, तर व्यक्तिमत्व विकासाचा एक अत्यंत महत्त्वाचा घटक आहे. या संस्थेचा अभिमान आहे की, ते असेच शिक्षण देण्याचा वचन घेत आहेत."
-            </p>
-            <p class="mt-4 text-gray-600">- प्राचार्य, कर्मवीर शंकररावजी काळे विद्यालय</p>
-        </div>
-    </div>
-</section>
-
 <!-- Facilities -->
 <section id="facilities" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">
-                Our School Facilities
+                आमच्या शाळेच्या सुविधा
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Facility 1 -->
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-right">
-                    <img src="https://via.placeholder.com/400x250" alt="Library" class="w-full h-48 object-cover">
+                    <img src="staff.jpg" alt="Library" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-700">State-of-the-Art Library</h3>
-                        <p class="text-gray-600 mt-2">Our library offers a vast collection of books, digital resources, and a quiet space for study.</p>
+                        <h3 class="text-xl font-semibold text-gray-700">शिक्षकांची मित्रवत कार्यशैली</h3>
+                        <p class="text-gray-600 mt-2">आमच्या शाळेतील शिक्षक आणि कर्मचारी विद्यार्थ्यांसोबत सुसंवादी आणि सहकार्यपूर्ण नाते राखतात, जे शालेय प्रगतीसाठी महत्त्वपूर्ण आहे.</p>
                     </div>
                 </div>
 
                 <!-- Facility 2 -->
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/400x250" alt="Science Lab" class="w-full h-48 object-cover">
+                    <img src="image6.jpg" alt="Science Lab" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold text-gray-700">Modern Science Labs</h3>
-                        <p class="text-gray-600 mt-2">Our fully equipped science labs provide hands-on learning experiences for students.</p>
+                        <h3 class="text-xl font-semibold text-gray-700">परसबग</h3>
+                        <p class="text-gray-600 mt-2">परसबगामध्ये विद्यार्थ्यांसाठी घरगुती लागवडीसाठी फळझाडे, भाज्या व औषधी वनस्पतींची देखभाल व संवर्धन करण्याची सुविधा आहे.</p>
                     </div>
                 </div>
 
@@ -320,7 +334,7 @@ nav.sticky {
 
                 <!-- Facility 6 -->
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-left">
-                    <img src="https://via.placeholder.com/400x250" alt="Auditorium" class="w-full h-48 object-cover">
+                    <img src="food.jpg" alt="Auditorium" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold text-gray-700">पोषणतत्त्वयुक्त आहार</h3>
                         <p class="text-gray-600 mt-2">विद्यार्थ्यांसाठी शारीरिक आणि मानसिक विकासासाठी पोषणतत्त्वांनी भरपूर आणि संतुलित आहार.</p>
@@ -329,152 +343,196 @@ nav.sticky {
             </div>
         </div>
     </section>
+    
+    <section id="committee" class="py-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">शाळा समिती</h2>
+    
+            <div class="grid grid-cols-1 gap-10">
+                <!-- Committee Member 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in">
+                    <img src="member1.jpg" alt="Member 1" class="w-24 h-24 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">मा. कारभारी मारुती पा.आगवन</h3>
+                    <p class="text-gray-500">स्थानिक स्कूल कमिटी चेअरमन</p>
+                    <p class="mt-4 text-sm text-gray-600">मा. कारभारी मारुती पा. आगवन यांनी शाळेच्या स्थानिक कमिटीचे अध्यक्ष म्हणून शाळेच्या सर्वांगीण विकासात महत्त्वपूर्ण योगदान दिले आहे. त्यांच्या अथक परिश्रमातून आणि ठोस नियोजनातून या विद्यालयाची स्थापना झाली आहे. त्यांच्या कर्तृत्वाला गावकऱ्यांचा भरभरून पाठिंबा लाभला, ज्यामुळे या विद्यालयाच्या उभारणीत सामूहिक सहभागाचे सुंदर उदाहरण घडले. शिक्षण क्षेत्रातील त्यांच्या दूरदृष्टीने शाळेच्या भौतिक तसेच तांत्रिक सुविधांचा स्तर उंचावला आहे, ज्यामुळे विद्यार्थ्यांना दर्जेदार शिक्षणाची संधी मिळत आहे.
+
+                        मा. आगवन यांची शैक्षणिक धोरणे प्रगत आणि समर्पक आहेत. त्यांनी गुणवत्तापूर्ण शिक्षणासाठी नवनवीन उपक्रम आणि तंत्रज्ञानाचा समावेश करून शाळेला आधुनिक शैक्षणिक प्रणालीशी जोडले आहे. त्यांच्या प्रभावी नेतृत्वाखाली शाळेने शैक्षणिक गुणवत्ता वाढवण्याबरोबरच विद्यार्थ्यांमध्ये स्वावलंबन, आत्मविश्वास आणि प्रगतीसाठीची मानसिकता विकसित केली आहे.
+                        
+                        शैक्षणिक क्षेत्रात त्यांची कामगिरी केवळ स्थानिक पातळीवरच नाही, तर व्यापक सामाजिक बदलांसाठी प्रेरणादायी ठरली आहे. शाळेच्या माध्यमातून त्यांनी ग्रामीण भागातील विद्यार्थ्यांसाठी शैक्षणिक दारं उघडून सामाजिक प्रगतीला चालना दिली आहे. त्यांच्या शैक्षणिक आणि सामाजिक कार्यातून एका सक्षम आणि प्रगल्भ समाजाच्या उभारणीसाठी त्यांनी भक्कम पाया घातला आहे. अशा या दूरदर्शी नेत्याच्या योगदानामुळे गावाच्या शिक्षणाच्या पटलावर प्रगतीचा नवा अध्याय लिहिला गेला आहे, जो भविष्यातील शिक्षण क्षेत्रासाठी एक आदर्श ठरेल.</p>
+                </div>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <!-- Committee Member 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in animation-delay-1">
+                    <img src="member2.jpg" alt="Member 2" class="w-24 h-24 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">डॉ. सुनील वामनराव देसाई</h3>
+                    <p class="text-gray-500">सदस्य स्थानिक स्कूलकमिटी</p>
+                    <p class="mt-4 text-sm text-gray-600">शालेय समितीत त्यांचा प्रभावशाली योगदान आहे, ज्यामध्ये शाळेच्या धोरण निर्धारणात निर्णायक भूमिका निभावून शाळेच्या सर्वांगीण विकासासाठी सुधारणा आणि मार्गदर्शन करण्यात ते महत्त्वाची भूमिका बजावत आहेत.</p>
+                </div>
+    
+                <!-- Committee Member 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in animation-delay-2">
+                    <img src="member3.jpg" alt="Member 3" class="w-24 h-24 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-semibold text-gray-700">मा. सांडूभाई शेरखा पठाण</h3>
+                    <p class="text-gray-500">सदस्य स्थानिक स्कूलकमिटी</p>
+                    <p class="mt-4 text-sm text-gray-600">स्थानिक स्कूल कमिटीच्या सदस्य म्हणून मा. सांडूभाई शेरखा पठाण यांचे शालेय व्यवस्थापन आणि विद्यार्थ्यांच्या कल्याणासाठी महत्त्वपूर्ण योगदान आहे. त्यांच्या मार्गदर्शनामुळे शाळेतील उपक्रम आणि धोरणांमध्ये सुधारणा झाली आहे.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Principal Section -->
+<section  class="py-12 px-6 bg-gray-100" data-aos="fade-up" data-aos-duration="1200">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-red-600 mb-4">प्राचार्यांचा संदेश</h2>
+        <p class="text-lg text-gray-700">आमच्या आदरणीय मुख्याध्यापकांकडून संदेश:.</p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 px-4">
+        <!-- Principal's Image -->
+        <div class="flex justify-center mb-8 lg:mb-0" animate-fade-in">
+            <img src="HM.jpg" alt="Principal" class="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full border-4 border-red-500 shadow-lg">
+        </div>
+
+        <!-- Principal's Message -->
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2" data-aos="fade-left" data-aos-duration="1200">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">आमच्या प्राचार्यांचे विचार</h3>
+            <p class="text-lg text-gray-700">
+                "माझ्या विद्यालयातील प्रत्येक विद्यार्थी हा रयत शिक्षण संस्थेची अमूल्य संपत्ती आहे. त्यांना केवळ ज्ञानप्राप्तीपर्यंत मर्यादित न ठेवता, एक आदर्श नागरिक, सशक्त व्यक्तिमत्त्व आणि समाजाच्या प्रगतीसाठी कार्यशील सदस्य घडवणे हा आमचा मुख्य उद्देश आहे. शिक्षण ही केवळ पुस्तकी ज्ञान प्राप्तीची प्रक्रिया नसून, ती विद्यार्थ्यांच्या व्यक्तिमत्त्वाचा सर्वांगीण विकास घडवण्याचे प्रभावी साधन आहे.<br>
+
+                आम्ही अशा प्रकारचे शिक्षण देण्याचा संकल्प केला आहे, जे त्यांच्या बौद्धिक, नैतिक, आणि व्यावहारिक क्षमतेचा विकास घडवून त्यांना जीवनाच्या प्रत्येक क्षेत्रात सक्षम बनवेल. रयत शिक्षण संस्थेचा अभिमान आहे की ती विद्यार्थ्यांना गुणवत्तापूर्ण शिक्षणाच्या माध्यमातून त्यांचे उज्ज्वल भविष्य घडवण्याच्या कार्यात सदैव अग्रस्थानी आहे."
+            </p>
+            <p class="mt-4 text-gray-600">श्री दिनकर महिपत माळी,बीए बीएड<br>- प्राचार्य, कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय, करंजी बु.</p>
+        </div>
+    </div>
+</section>
 
 <!-- Staff Info Section -->
-<section id="staff" class="py-12 px-6 bg-white" data-aos="fade-up" data-aos-duration="1000">
+<section id="staff" class="py-12 px-6 bg-gray-50" data-aos="fade-up" data-aos-duration="1000">
     <div class="max-w-7xl mx-auto text-center mb-12">
-        <h2 class="text-3xl font-bold text-red-600 mb-4">Our Dedicated Staff</h2>
-        <p class="text-lg text-gray-700">Meet our passionate and hardworking teachers.</p>
+        <h2 class="text-4xl font-bold text-red-600 mb-6">शिक्षक वृंद</h2>
     </div>
 
     <!-- Staff List -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Teacher 1 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="zhalte.jpg" alt="Teacher 1" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 1</h3>
-            <p class="text-sm text-gray-600">Mathematics</p>
-            <p class="text-sm text-gray-600">Years of Experience: 10</p>
+        <!-- Teacher Cards -->
+        <div class="teacher-card">
+            <img src="zhalte.jpg" alt="श्री देविदास सोपान झाल्टे" class="teacher-img">
+            <h3 class="teacher-name">श्री देविदास सोपान झाल्टे</h3>
+            <p class="teacher-qualification">बी एस्सी बी एड</p>
+            <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <!-- Teacher 2 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="thaksal.jpg" alt="Teacher 2" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 2</h3>
-            <p class="text-sm text-gray-600">Science</p>
-            <p class="text-sm text-gray-600">Years of Experience: 8</p>
+        <div class="teacher-card">
+            <img src="thaksal.jpg" alt="श्री राधाकिसन कचरू टाकसाळ" class="teacher-img">
+            <h3 class="teacher-name">श्री राधाकिसन कचरू टाकसाळ</h3>
+            <p class="teacher-qualification">बीए बीएड</p>
+            <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <!-- Teacher 3 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="chavan.jpg" alt="Teacher 3" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 3</h3>
-            <p class="text-sm text-gray-600">English</p>
-            <p class="text-sm text-gray-600">Years of Experience: 12</p>
-        </div>
-        <!-- Teacher 4 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="jagtap.jpg" alt="Teacher 4" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 4</h3>
-            <p class="text-sm text-gray-600">History</p>
-            <p class="text-sm text-gray-600">Years of Experience: 6</p>
+        <div class="teacher-card">
+            <img src="chavan.jpg" alt="श्री संदीप दिलीप चव्हाण" class="teacher-img">
+            <h3 class="teacher-name">श्री संदीप दिलीप चव्हाण</h3>
+            <p class="teacher-qualification">ए एम ,जी डी आर्ट</p>
+            <p class="teacher-role">उपशिक्षक</p>
+            <p class="teacher-award">महाराष्ट्र शासन राज्य आदर्श शिक्षक पुरस्कार प्राप्त</p>
         </div>
 
-        <!-- Teacher 5 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="barde.jpg" alt="Teacher 4" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 5</h3>
-            <p class="text-sm text-gray-600">History</p>
-            <p class="text-sm text-gray-600">Years of Experience: 6</p>
+        <div class="teacher-card">
+            <img src="jagtap.jpg" alt="श्री ललित प्रकाश जगताप" class="teacher-img">
+            <h3 class="teacher-name">श्री ललित प्रकाश जगताप</h3>
+            <p class="teacher-qualification">बीए डीएड</p>
+            <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <!-- Teacher 6 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="sangle.jpg" alt="Teacher 5" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 6</h3>
-            <p class="text-sm text-gray-600">Geography</p>
-            <p class="text-sm text-gray-600">Years of Experience: 5</p>
+        <div class="teacher-card">
+            <img src="barde.jpg" alt="श्री सिद्धार्थ विठ्ठलराव बरडे" class="teacher-img">
+            <h3 class="teacher-name">श्री सिद्धार्थ विठ्ठलराव बरडे</h3>
+            <p class="teacher-qualification">बीएससी बीएड</p>
+            <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <!-- Teacher 7 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="dange.jpg" alt="Teacher 6" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 7</h3>
-            <p class="text-sm text-gray-600">Art</p>
-            <p class="text-sm text-gray-600">Years of Experience: 4</p>
+        <div class="teacher-card">
+            <img src="sangle.jpg" alt="श्री गजानन धोंडीबा सांगळे" class="teacher-img">
+            <h3 class="teacher-name">श्री गजानन धोंडीबा सांगळे</h3>
+            <p class="teacher-qualification">एम ए बी एड</p>
+            <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <!-- Teacher 8 -->
-        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="pimple.jpg" alt="Teacher 7" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
-            <h3 class="text-xl font-semibold text-gray-800">Teacher 8</h3>
-            <p class="text-sm text-gray-600">Physical Education</p>
-            <p class="text-sm text-gray-600">Years of Experience: 7</p>
+        <div class="teacher-card">
+            <img src="dange.jpg" alt="श्री सचिन शत्रुघ्न डांगे" class="teacher-img">
+            <h3 class="teacher-name">श्री सचिन शत्रुघ्न डांगे</h3>
+            <p class="teacher-qualification">एम ए बी एड (सेट)</p>
+            <p class="teacher-role">उपशिक्षक</p>
+        </div>
+
+        <div class="teacher-card">
+            <img src="pimple.jpg" alt="श्री सुनील रामराव पिंपळे" class="teacher-img">
+            <h3 class="teacher-name">श्री सुनील रामराव पिंपळे</h3>
+            <p class="teacher-qualification">डी एड</p>
+            <p class="teacher-role">उपशिक्षक</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto text-center mt-16 mb-12">
+        <h2 class="text-4xl font-bold text-red-600 mb-6">शिक्षकेत्तर सहकारी</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Non-Teaching Staff -->
+        <div class="teacher-card">
+            <img src="sarode.jpg" alt="श्री अनिल विष्णुपंत सरोदे" class="teacher-img">
+            <h3 class="teacher-name">श्री अनिल विष्णुपंत सरोदे</h3>
+            <p class="teacher-qualification">बी ए</p>
+            <p class="teacher-role">वरिष्ठ लिपिक</p>
+        </div>
+
+        <div class="teacher-card">
+            <img src="gavanath.jpg" alt="श्री गवनाथ सिताराम डोखे" class="teacher-img">
+            <h3 class="teacher-name">श्री गवनाथ सिताराम डोखे</h3>
+            <p class="teacher-qualification">एस एस सी</p>
+            <p class="teacher-role">शिपाई</p>
         </div>
     </div>
 </section>
 
-<section id="committee" class="py-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1200">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-8">School Committee</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Committee Member 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in">
-        <img src="member1.jpg" alt="Member 1" class="w-24 h-24 mx-auto rounded-full mb-4">
-        <h3 class="text-xl font-semibold text-gray-700">मा. कारभारी मारुती पा.आगवन</h3>
-        <p class="text-gray-500">स्थानिक स्कूल कमिटी चेअरमन</p>
-        <p class="mt-4 text-sm text-gray-600">John brings 20 years of leadership experience in education and administration.</p>
-      </div>
-      <!-- Committee Member 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in animation-delay-1">
-        <img src="member2.jpg" alt="Member 2" class="w-24 h-24 mx-auto rounded-full mb-4">
-        <h3 class="text-xl font-semibold text-gray-700">डॉ.सुनील वामनराव देसाई</h3>
-        <p class="text-gray-500">सदस्य स्थानिक स्कूलकमिटी</p>
-        <p class="mt-4 text-sm text-gray-600">Jane specializes in curriculum development and teacher training programs.</p>
-      </div>
-      <!-- Committee Member 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in animation-delay-2">
-        <img src="member3.jpg" alt="Member 3" class="w-24 h-24 mx-auto rounded-full mb-4">
-        <h3 class="text-xl font-semibold text-gray-700">मा.सांडूभाई शेरखा पठाण </h3>
-        <p class="text-gray-500">सदस्य स्थानिक स्कूलकमिटी</p>
-        <p class="mt-4 text-sm text-gray-600">Mark ensures strong communication between parents and the school committee.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1200">
+<section id="principal" class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1200">
     <div class="container mx-auto px-6">
         <!-- Title Section -->
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-800">प्रेरणा स्थान</h2>
-            <p class="text-lg text-gray-600 mt-4">Inspirational Leaders Who Shaped the Future</p>
         </div>
 
         <!-- Founder Cards Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="grid grid-cols-1 md:grid-row-1 lg:grid-cols-1 gap-12">
             <!-- Founder 1 -->
             <div class="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100" data-aos="fade-right">
                 <img src="anna.jpg" alt="Founder 1" class="w-32 h-32 rounded-full mb-6 shadow-md">
                 <h4 class="text-2xl font-semibold text-gray-800 mb-2">कर्मवीर भाऊराव पाटील</h4>
                 <p class="text-gray-600 text-lg">शिक्षणाचे आधुनिक भगीरथ <br> (२२ सप्टेंबर १८८७ - ९ मे १९५९)</p>
-                <p class="text-gray-600 mt-4 text-base leading-relaxed">
-                    कर्मवीर भाऊराव पाटील हे महाराष्ट्रातील एक प्रसिद्ध समाजसेवक व शिक्षण क्षेत्रातील अग्रणी नेते होते. २२ नोव्हेंबर १८८७ रोजी अहमदनगर जिल्ह्यातील शिरूर तालुक्यातील कोपरगाव येथे जन्मलेल्या भाऊराव पाटील यांचा जीवन प्रवास समाजाच्या उत्थानासाठी समर्पित होता. त्यांचे प्राथमिक शिक्षण कोपरगाव आणि जवळच्या गावात झाले.
-                </p>
-            </div>
-            <!-- Founder 2 -->
-            <div class="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100" data-aos="fade-left">
-                <img src="mata.jpg" alt="Founder 3" class="w-32 h-32 rounded-full mb-6 shadow-md">
-                <h4 class="text-2xl font-semibold text-gray-800 mb-2">तिसरा संस्थापक</h4>
-                <p class="text-gray-600 text-lg">शिक्षणाची प्रेरणास्त्रोत<br> (७ जून १८९४ - २५ फेब्रुवारी १९३०)</p>
-                <p class="text-gray-600 mt-4 text-base leading-relaxed">
-                    लक्ष्मीबाई भाऊराव पाटील यांचे रयत शिक्षण संस्थेच्या जडणघडणीमध्ये अत्यंत महत्त्वपूर्ण योगदान होते. त्यांनी संस्थेच्या वसतिगृहात सर्व जाती आणि धर्मातील मुलांना समान संधी दिली आणि त्यांच्या पालनपोषणाची जबाबदारी घेतली. त्यांनी विद्यार्थ्यांच्या शिक्षणासोबतच, त्यांना आवश्यक असलेल्या आहार, देखभाल आणि सांस्कृतिक समावेशाची काळजी घेतली. त्यांच्या व्यक्तिमत्त्वाच्या बदलामुळे त्यांचे कर्मठपण कमी झाले आणि त्यांनी एकीकडे शाळेतील मुलांसाठी आणि दुसरीकडे आपल्या कुटुंबासाठी सर्वस्व अर्पण केले. त्यांच्या त्यागामुळे रयत शिक्षण संस्थेचे अस्तित्व मजबूत झाले आणि त्यांचे योगदान आजही शेकडो विद्यार्थ्यांच्या जीवनात चांगले परिणाम देत आहे.
-                </p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">कर्मवीर भाऊराव पाटील हे शिक्षणाच्या क्षेत्रात आदर्श नेते होते. त्यांचा दृढ नेतृत्व आणि समाजासाठी समर्पण हे अत्यंत प्रेरणादायी आहे. भाऊराव पाटील यांनी आपल्या कार्यातून शिक्षणाचे महत्व जनमानसात रुजवले आणि ग्रामीण भागातील शिक्षणाच्या पातळीला एक नवा आकार दिला.</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">त्यांनी शाळा आणि महाविद्यालयांच्या स्थापनेसाठी अथक परिश्रम घेतले आणि शिक्षणाच्या क्षेत्रात नव्या विचारांची बीजे रोवली. "शिक्षण हेच समाज परिवर्तनाचे सर्वोत्तम साधन आहे" हा त्यांचा विश्वास होता, ज्यामुळे त्यांनी सामाजिक समानतेसाठी शिक्षणाचा वापर केला. त्यांच्या कार्यामुळे अनेक विद्यार्थ्यांना योग्य शिक्षण मिळवून त्यांचे जीवन परिवर्तन झाले.</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">त्यांच्या कार्याने आपल्याला असे शिकवले की, एक आदर्श नेता समाजाच्या विकासासाठी आणि शिक्षणाच्या प्रसारासाठी आपल्या कर्तव्याप्रती समर्पित असावा लागतो.</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">कर्मवीर भाऊराव पाटील यांनी शिक्षणाची दिशा निश्चित केली आणि ग्रामीण भागातील मुलांना शिक्षणाची संधी दिली. त्यांचा दृढ विश्वास होता की शिक्षणानेच समाजात समानता आणि न्याय प्रस्थापित होऊ शकतो. त्यांनी आपल्या प्रयत्नांनी सुमारे 450 शाळा आणि महाविद्यालये स्थापन केली, ज्यामुळे लाखो विद्यार्थ्यांना शिक्षण मिळाले.</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">त्यांचे कार्य आजही प्रेरणादायक आहे, कारण त्यांनी आपले संपूर्ण जीवन समाजाच्या सर्वांगीण विकासासाठी समर्पित केले. त्यांच्या कष्टामुळे शिक्षणाच्या क्षेत्रात क्रांतिकारी बदल घडले आणि ग्रामीण भारतातील मुलांनाही उच्च शिक्षण मिळवण्याची संधी मिळाली.</p>
             </div>
             <!-- Founder 3 -->
             <div class="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100" data-aos="fade-up">
                 <img src="founder.jpg" alt="Founder 2" class="w-32 h-32 rounded-full mb-6 shadow-md">
-                <h4 class="text-2xl font-semibold text-gray-800 mb-2">शंकररावजी काळे साहेब</h4>
-                <p class="text-gray-600 text-lg">शिक्षण व सहकार क्षेत्रातील प्रणेते <br> (६ एप्रिल १९२१ - २८ फेब्रुवारी १९८९)</p>
-                <p class="text-gray-600 mt-4 text-base leading-relaxed">
-                    शंकररावजी काळे साहेब हे शिक्षण, सहकार, व समाजसेवेच्या माध्यमातून महाराष्ट्रातील विकासाच्या यशोगाथेचे एक प्रेरणादायी व्यक्तिमत्त्व आहे. कोपरगाव तालुक्यातील माहेगाव देशमुख या छोट्याशा खेड्यात ६ एप्रिल १९२१ रोजी एका सामान्य शेतकरी कुटुंबात जन्मलेल्या शंकरराव काळे यांनी आपल्या अथक परिश्रमाने सामान्य परिस्थितीतून असामान्य यश संपादन केले.
-                </p>
+                <h4 class="text-2xl font-semibold text-gray-800 mb-2">स्व.खासदार कर्मवीर शंकररावजी काळे साहेब</h4>
+                <p class="text-gray-600 text-lg">शिक्षण व सहकार क्षेत्रातील प्रणेते <br> (६ एप्रिल १९२१ - ५ नोव्हेंबर २०१२)</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">स्व.खासदार कर्मवीर शंकरराव काळे यांचा जन्म ६ एप्रिल १९२१ रोजी कोपरगाव तालुक्यातील माहेगाव देशमुख या खेड्यात शेतकरी कुटुंबात झाला. त्यांच्या आई-वडिलांनी शेती करून संसार चालवला. वडील देवरामबाबा काळे शिक्षणाचे महत्त्व ओळखून मुलांना शिकवण्यासाठी कायम प्रयत्नशील होते. शंकरराव साहेब बी.एस्सी. आणि बी.ई. (सिव्हिल) झाले, आणि ते त्यावेळचे एकमेव उच्चशिक्षित होते.</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">कर्मवीर भाऊराव पाटील यांना ज्यांनी प्रत्यक्ष काम करताना बघितलं त्या सुदैवी लोकांपैकी स्व. काळे साहेब हे एक होत. कर्मवीरांसोबत साहेबांचा संपर्क १९४८ च्या सुमारास आला. शिक्षण प्रसारासाठी अहोरात्र झटणाऱ्या या ऋषीतुल्य व्यक्तिमत्त्वाने साहेब भारावले होते. कारखाना सुरू झाल्यावर एकदा कर्मवीर भाऊराव पाटील कोपरगाव साखर कारखान्यात साहेबांना भेटायला आले. साहेबांच्या आयुष्यातला तो अत्यंत महत्त्वाचा दिवस होता. एवढंच नव्हे तर कर्मवीर साहेबांच्या माहेगाव देशमुख येथील वस्तीवर मुक्कामीही थांबले होते. अर्थात मनात काही हेतू होताच... पण ऋषीतुल्य माणसांचा हेतू हा जनतेच्या हिताचाच असतो.कर्मवीरांनी साहेबांकडे एकच मागणी केली, "मला तुम्ही खळ्यातलं मातेरं द्या आणि धान्य तुम्हाला ठेवा." म्हणजे शिक्षणप्रसारासाठी रयत संस्थेला कारखान्यातर्फे थोडी मदत करा. कर्मवीरांचा शब्द प्रमाण मानला. त्यांनी भरघोस मदत केली. स्वतः नव्या शाळा काढल्या, इतरांना शाळा सुरू करायला मदत केली. रयत शिक्षण संस्थेच्या शाळांचा प्रसार केला, प्रसंगी पदरमोड करून अनेक शाळा-महाविद्यालय उभी केली. हे सगळं करताना स्व. साहेबांनी कसलाही हेतू मनात ठेवला नव्हता. प्रसिद्धीची हाव नव्हती, पदाची लालसा नव्हती. कर्मवीरांनी दाखवलेल्या ज्ञान प्रकाशात त्यांनी पुढची वाटचाल केली. त्यामुळे आशियातील सर्वात मोठी शिक्षणसंस्था म्हणून नावाजलेल्या रयत शिक्षण संस्थेच्या चेअरमन पदावर त्यांची नेमणूक झाली. कारखान्याने कार्यक्षेत्रातील छत्रपती संभाजी प्राथमिक विद्यालय गौतमनगर, श्री. शिवशंकर विद्यालय रवंदे.,श्री.ग.र.औताडे मा.व उच्च मा. विद्यालय पोहेगाव,मारुतराव दगडूजी तिडके पा.मा.व उच्च मा. विद्यालय चासनळी, गुरुवर्य तुकारामबाबा विद्यालय कुंभारी, न्यू इंग्लिश स्कूल धामोरी, या रयत शिक्षण संस्थेच्या माध्यमिक विद्यालयांना इमारती बांधून दिलेल्या असून नाशिक जिल्ह्यातील डी. आर. भोसले विद्यालय देवगाव व जनता विद्यालय मुखेड तसेच कर्मवीर शंकरराव काळे माध्यमिक विद्यालय सोनेवाडी, सौ. सुशीलामाई शंकरराव काळे माध्यमिक विद्यालय भोजडे, कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय करंजी व सौ. सुशीलामाई काळे माध्यमिक विद्यालय उक्कडगाव या विद्यालयांना वर्गखोल्या बांधण्यास मदतीचा हात दिला आहे. तसेच या विद्यालयांसाठी आवश्यक असणारी जमीनही त्या त्या ठिकाणी वेळोवेळी घेऊन दिलेली आहे. तसेच कारखाना कार्यस्थळावर कार्यरत असलेल्या रयत शिक्षण संस्थेच्या छत्रपती शिवाजी माध्यमिक विद्यालय व कनिष्ठ महाविद्यालय व राधाबाई काळे कन्या विद्यामंदिर व कनिष्ठ महाविद्यालय कोळपेवाडी तसेच कोपरगाव येथील एस.एस.जी.एम. कॉलेज व जिल्ह्याचे ठिकाणी अहमदनगर येथे कार्यरत असलेल्या राधाबाई काळे महिला महाविद्यालय,जामखेड, नगर, कर्जत, पारनेर, श्रीगोंदा यांसारख्या अनेक ठिकाणी वेळोवेळी भरीव आर्थिक मदत केलेली आहे. मा. काळे साहेबांना १९७५-९० अशी पंधरा वर्षे संस्थेचे चेअरमन म्हणून काम करण्याची संधी मिळाली. मिळालेली संधी ही समाजसेवेचे व्रत म्हणून त्यांनी केलेले कार्य आजच्या पिढीला आदर्शवत् तर आहेच आहे, परंतु तेवढेच ते मार्गदर्शकही आहे..कर्मवीरांना संपूर्ण महाराष्ट्रात माध्यमिक शिक्षणाचे जाळे निर्माण केल्यानंतर रयत शिक्षण संस्थेमध्ये शिकणाऱ्या रयतेच्या विद्यार्थ्यांची महाविद्यालयीन शिक्षणाची व्यवस्था येथेच व्हावी म्हणून छ. शिवाजी कॉलेजची स्थापना करून उच्च शिक्षण क्षेत्रात पाऊल ठेवले. तोच अण्णांचा कृतिशील विचार नगर जिल्ह्यात रूजविला. नगर जिल्ह्यात रयतेची उच्च शिक्षण देणारी महाविद्यालये असावीत ही त्यांची सुप्त इच्छा अतिशय खडतर प्रयत्नातून पूर्ण केली. एखादी शाखा उभी करण्याचा निश्चय उराशी बाळगून काम करताना त्याची परिपूर्ती केल्याशिवाय स्वस्थ बसायचे नाही हा स्व.काळे साहेबांच्या कार्यपद्धतीचा अविभाज्य भाग होता.त्यांच्या प्रयत्नातून अहमदनगर जिल्ह्यात अनेक महाविद्यालये उभी राहिली आहेत. या शाखांच्या उभारणीतून त्यांच्या कल्पक नेतृत्वाचीच छाप पडते. वाशी (नवी मुंबई) येथील मॉडर्न हायस्कूल रयतला मिळावे यासाठी स्व.शंकररावजी काळे साहेबांनी केलेले प्रयत्न, त्या प्रयत्नांना यश मिळाल्यामुळे आज त्याच जागेत संस्थेतील आणि नवी मुंबई परिसरात उभे राहिलेले, एक नावाजलेले कर्मवीर भाऊराव पाटील महाविद्यालय पाहिले की, काळे साहेबांच्या दूरदृष्टीची साक्ष पटते.
+श्रीरामपूर, कर्जत, श्रीगोंदा या नगर जिल्ह्यातील महत्त्वाच्या ठिकाणी महाविद्यालयाच्या उभारणीनंतर कोपरगाव येथे महाविद्यालयीन शिक्षण देणारे केंद्र का असू नये? असा विचार मा. शंकररावजी काळेसाहेब यांच्या मनात येणे अगदीच स्वाभाविक होते. या महाविद्यालयाच्या उभारणीसाठी अनेक अडचणी उभ्या राहिल्या, या सर्वच समस्यांवर मात करीत शेवटी केवळ सायन्स विभाग घेऊन महाविद्यालय सुरू केले. विशेष म्हणजे या महाविद्यालयाची परवानगी मिळावी यासाठी काळेसाहेबांनी विद्यापीठाची निवडणूक लढविली. त्या अधिकार मंडळाचे सदस्यत्व स्वीकारून आपल्या सर्व अधिकारांचा वापर करून महाविद्यालयाची परवानगी मिळविली. जिद्दीने पैसे गोळा करून इमारत उभी केली.यासाठी मा.स्व.शंकररावजी कोल्हे,अॅड.वझे आणि इतरांनी या महाविद्यालयाच्या उभारणीसाठी केलेल्या मदतीचा काळेसाहेब नेहमीच कृतज्ञतापूर्वक उल्लेख करायचे. हा त्यांच्या मनाचा मोठेपणा होता. शेवटी याच महाविद्यालयात तिन्ही शाखा सुरू झाल्या. स्वामी सहजानंद भारती, संत गंगागीर महाराज हे या परिसरातील मोठे संत ज्यांनी या परिसरातील माणसांची आध्यात्मिक उंची वाढविण्याचा प्रयत्न केला आहे. त्यांच्याबद्दल कृतज्ञता व्यक्त करण्यासाठीच जणू कोपरगावच्या महाविद्यालयाला श्री. सद्गुरु गंगागीर महाराज सायन्स, गौतम आर्टस आणि संजीवनी कॉमर्स' असे नाव देण्यात आले.
+    मा. शंकररावजी काळे यांनी संपूर्ण जीवनभर कर्मवीर आण्णांच्या कार्यावर निष्ठा ठेवून कार्य केले. ते करीत असताना संस्थेच्या संख्यात्मक आणि गुणात्मक विकासाला प्राधान्य दिले. २१ व्या शतकातील आव्हानांना समर्थपणे तोंड देणारा विद्यार्थी तयार झाला पाहिजे. त्याला माहिती तंत्रज्ञान, जैव-तंत्रज्ञान, स्पर्धा परीक्षा यांसारख्या विविध क्षेत्रांतील अद्यावत ज्ञान मिळाले पाहिजे, हा त्यांचा नेहमी आग्रह असावयाचा.त्यासाठी शिक्षकांनी अद्यावत ज्ञान आत्मसात करून ते विद्यार्थ्यापर्यंत पोहोचवले पाहिजे, यासाठी काळेसाहेब सातत्याने प्रयत्नशील असायचे. या संस्थेतून बाहेर पडणारा विद्यार्थी समाजातील प्रचंड स्पर्धेला आत्मविश्वासाने सामोरे जाणारा असला पाहिजे असे त्यांचे मत होते.
+       महाराष्ट्राच्या मातीत जन्माला आलेला कोणताही भूमिपुत्र, कोणत्याही कारणामुळे शिक्षणापासून वंचित राहणार नाही, याची काळजी घेण्यासाठी महाराष्ट्रात ज्या ज्या शैक्षणिक चळवळी निर्माण झाल्या त्या सर्व चळवळींना बळ देण्याचे सामर्थ्य देण्याचे महत्त्वपूर्ण कार्य काळे साहेबांनी जीवनभर केले आहे. कर्मवीर अण्णांच्या कार्यातून शैक्षणिक कार्याची दीक्षा घेऊन त्यांनी लावलेल्या ज्ञानाच्या रोपट्याला आपल्या प्रयत्नांनी मोठे केले, वाढविले. आज संपूर्ण महाराष्ट्र त्या ज्ञानवृक्षांची फळे चाखतो आहे. आपल्या राजकीय जीवनातून, सहकाराच्या माध्यमातून मा.स्व शंकररावजी काळे साहेबांनी आपल्या शैक्षणिक कार्याचा डोंगर उभा केला आहे. महाराष्ट्राच्या शिक्षण क्षेत्रात कार्य करणाऱ्या प्रत्येक 'रयत सेवकाला' याचा सार्थ अभिमान वाटतो. नगर जिल्ह्यातील संस्थेचा विस्तार करण्यात काळे साहेबांनी सिंहाचा वाटा उचलला आहे. त्यांच्या या कार्याबद्दल कृतज्ञता व्यक्त करावी म्हणून पद्मभूषण डॉ. कर्मवीर भाऊराव पाटील यांच्या कुटुंबीयांच्या वतीने दिला जाणारा 'रयत माऊली' पुरस्कार मा. शंकरराव काळे यांना सन्मानपूर्वक प्रदान करण्यात आला होता.</p>
             </div>
             
         </div>
     </div>
 </section>
-
-
 
 
 <!-- Footer Section -->
@@ -486,26 +544,29 @@ nav.sticky {
             <ul class="space-y-3 text-sm">
                 <li class="flex items-center">
                     <span class="inline-block mr-3 text-red-600">📍</span>
-                    <p>Athani Rd, Shastri Nagar, Vijayapura, Karnataka 586102, India</p>
+                    <p>रयत शिक्षण संस्थेचे,
+                        कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय करंजी बु. 
+                        तालुका कोपरगाव,जिल्हा अहिल्यानगर,महाराष्ट्र 
+                        ४२३६०३</p>
                 </li>
                 <li class="flex items-center">
                     <span class="inline-block mr-3 text-blue-500">📧</span>
                     <a href="mailto:pplssbj1963@gmail.com" class="hover:underline text-maroon-700">
-                        pplssbj1963@gmail.com
+                        karanji.nesnorth@ gmail.com
                     </a>
                 </li>
                 <li class="flex items-center">
                     <span class="inline-block mr-3 text-green-600">📞</span>
-                    +91 08352-270638
+                    +91 99757 17713
                 </li>
                 <li class="flex items-center">
-                    <span class="inline-block mr-3 text-yellow-500">📠</span>
-                    +91 08352-271560
+                    <span class="inline-block mr-3 text-green-600">📞</span>
+                    +91 93095 95464
                 </li>
                 <li class="flex items-center">
                     <span class="inline-block mr-3 text-purple-500">🌐</span>
-                    <a href="http://www.ssbj.in" class="hover:underline text-maroon-700">
-                        www.ssbj.in
+                    <a href="#about" class="hover:underline text-maroon-700">
+                        www.कर्मवीरशंकररावजीकाळेमाध्यमिकविद्यालयकरंजी.in
                     </a>
                 </li>
             </ul>
@@ -513,16 +574,20 @@ nav.sticky {
 
         <!-- Map Section -->
         <div class="flex-1" data-aos="fade-left" data-aos-duration="1000">
-    <h3 class="text-xl font-semibold mb-4 text-maroon-700">Find Us on Map</h3>
-    <div class="w-full h-56 rounded-lg overflow-hidden shadow-lg border border-gray-700">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1234567890123!2d74.00345678901234!3d17.680123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xdef1234567890abc!2sRayat%20English%20Medium%20School%2C%20Satara!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
+            <h3 class="text-xl font-semibold mb-4 text-maroon-700">Find Us on Map</h3>
+            <div class="w-full h-56 rounded-lg overflow-hidden shadow-lg border border-gray-700">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.490536379176!2d74.5364719!3d19.9363425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdc417b63c48ee9%3A0x44d9e480f08a37ea!2sKSK%20High%20School!5e0!3m2!1sen!2sin!4v1698243200000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        
+        
     </div>
 </div>
 
@@ -530,7 +595,7 @@ nav.sticky {
 
     <!-- Horizontal Divider and Copyright -->
     <div class="mt-8 border-t border-gray-400 pt-4 text-center text-sm text-gray-600">
-        <p>&copy; 2024 कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय, करंजी बु.. All rights reserved.</p>
+        <p>&copy; 2024 कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय, करंजी बु. All rights reserved.</p>
         <p>Designed by Shivam Sandip Chavan.</p>
     </div>
 </footer>
