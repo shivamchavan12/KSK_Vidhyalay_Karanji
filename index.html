@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="mr">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>मराठी शाळा</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Only apply to the body */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Ensure consistent box-sizing */
+}
+
+/* Ensure header sticky works */
+nav.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+        .logo {
+            border-radius: 9999px;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+         @keyframes shine {
+        0% { background-position: -200%; }
+        100% { background-position: 200%; }
+    }
+    .text-gradient {
+        background: linear-gradient(to right, #6ee7b7, #3b82f6, #9333ea);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+     /* Underline Transition Effect */
+    nav a {
+        position: relative;
+    }
+
+    nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px; /* Position the underline just below the text */
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color:rgb(255, 255, 255); /* Red color */
+        transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+        width: 100%;
+    }
+     @keyframes slideLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* Apply the animations to specific elements */
+  .animate-slide-left {
+    animation: slideLeft 25s linear infinite;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 25s linear infinite;
+  }
+  @keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    </style>
+</head>
+<body class="bg-yellow-50 text-gray-900 font-sans">
+
+<!-- Header Section -->
+<header class="bg-red-800 text-white py-4 px-6 shadow-lg top-0 z-50">
+    <!-- Logo and Title Section -->
+    <div class="flex items-center justify-between">
+        <!-- Left Logo -->
+        <div class="flex-shrink-0">
+            <img src="logo.jpg" alt="School Logo" class="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 rounded-full border-4 border-white shadow-md">
+        </div>
+
+        <!-- Title Section -->
+        <div class="flex-1 text-center px-4">
+            <!-- Small Title -->
+            <p class="text-xs sm:text-sm md:text-base text-white mb-1">रयत शिक्षण संस्थेचे,</p>
+            <!-- Main Title -->
+            <h1 class="text-lg sm:text-xl md:text-3xl font-semibold tracking-wide text-white leading-tight">
+                कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय, करंजी बु.
+            </h1>
+        </div>
+
+        <!-- Right Logo -->
+        <div class="flex-shrink-0">
+            <img src="anna.jpg" alt="Second Logo" class="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 rounded-full border-4 border-white shadow-md">
+        </div>
+    </div>
+</header>
+
+
+<!-- Navigation Bar Below Titles -->
+<nav class="bg-red-800 text-white py-4 px-6 shadow-lg sticky top-0 z-50">
+<nav class="bg-red-800 text-white py-6 sm:py-4 px-6 shadow-lg sticky top-0 z-50 lg:hidden"></nav> <!-- Increased padding only for mobile -->
+
+    <div class="hidden lg:flex justify-center space-x-8 mt-1"> <!-- Hide on mobile, show on desktop -->
+        <a href="#about" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">आमच्याबद्दल</a>
+        <a href="#gallery" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">गॅलरी</a>
+        <a href="#principal" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">प्राचार्यांचे विचार</a>
+        <a href="#facilities" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">वैशिष्ठे</a>
+        <a href="#staff" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">स्टाफ</a>
+        <a href="#committee" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">स्कूल कमिटी</a>
+        <a href="#contact" class="text-lg text-white relative hover:text-yellow-400 transition duration-300">संपर्क</a>
+    </div>
+
+    <!-- Mobile Menu Button (Fixed Position) -->
+    <button id="menu-btn" class="lg:hidden text-white focus:outline-none absolute top-6 right-6 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+</button>
+
+    <!-- Mobile Menu (Hidden initially) -->
+    <div id="mobile-menu" class="hidden bg-red-600 text-white p-4 space-y-4 shadow-lg">
+        <a href="#about" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">आमच्याबद्दल</a>
+        <a href="#gallery" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">गॅलरी</a>
+        <a href="#principal" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">प्राचार्यांचे विचार</a>
+        <a href="#facilities" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">वैशिष्ठे</a>
+        <a href="#staff" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">स्टाफ</a>
+        <a href="#committee" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">स्कूल कमिटी</a>
+        <a href="#contact" class="block text-lg px-4 py-2 hover:bg-white hover:text-red-600 rounded-lg transition duration-300">संपर्क</a>
+    </div>
+</nav>
+
+<!-- photo -->
+<section id="school-photo" class="relative w-full">
+    <div data-aos="fade-in" data-aos-duration="1000" class="overflow-hidden group">
+        <!-- School Photo -->
+        <img 
+            src="school.jpg" 
+            alt="School Photo" 
+            class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+        >
+        <!-- Caption Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+            <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center px-4">
+                आमच्या शाळेत आपले स्वागत आहे
+            </h2>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-12 px-6 bg-yellow-50">
+    <div class="max-w-7xl mx-auto fade-in">
+        <h3 class="text-3xl font-bold text-center text-red-600 mb-8" data-aos="fade-up">आमच्याबद्दल</h3>
+        <p class="text-lg text-gray-700 text-center mb-12" data-aos="fade-up" data-aos-delay="200">रयत शिक्षण संस्थेच्या माध्यमिक शाळेत विद्यार्थ्यांसाठी उत्कृष्ट सुविधांची सोय आहे. शाळेत प्रशस्त वर्गखोल्या, अद्ययावत संगणक लॅब, सायन्स लॅब, व प्रेरणादायी पुस्तकांनी समृद्ध ग्रंथालय उपलब्ध आहे. विद्यार्थ्यांच्या खेळाच्या आवडीला प्रोत्साहन देण्यासाठी विस्तृत क्रीडांगण आणि क्रीडा सुविधा आहेत. तसेच, शाळा विद्यार्थ्यांच्या व्यक्तिमत्त्व विकासासाठी विविध सांस्कृतिक आणि शैक्षणिक उपक्रमांचे आयोजन करते.शाळेचे ध्येय विद्यार्थ्यांना गुणवत्तापूर्ण शिक्षणासोबत नैतिक मूल्यांचे शिक्षण देऊन त्यांना शिस्तबद्ध आणि जबाबदार नागरिक घडवणे हे आहे. या शिक्षणाद्वारे स्वावलंबन, श्रमप्रतिष्ठा आणि समाजसेवेचे महत्त्व रुजवणे शाळेचा मुख्य उद्देश आहे.प्रत्येक विद्यार्थ्याच्या सर्वांगीण विकासासाठी वचनबद्ध असलेल्या या शाळेत सुरक्षित परिसर आणि शुद्ध पाण्याची सोयही आहे. शाळेचा दृष्टिकोन समाजाच्या प्रगतीत योगदान देणाऱ्या शिक्षित आणि आदर्श व्यक्तिमत्त्वांचा विकास करणे हा आहे.</p>
+    </div>
+</section>
+
+
+<section id="gallery" class="bg-white py-12">
+    <h2 class="text-3xl font-bold text-center mb-8 text-red-800">गॅलरी</h2>
+
+    <!-- Upper Line of Photos (Moving Left to Right) -->
+    <div class="relative overflow-hidden">
+        <div class="flex animate-slide-left">
+            <img src="image1.jpg" alt="Gallery 1" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image2.jpg" alt="Gallery 2" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image3.jpg" alt="Gallery 3" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image4.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image19.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image7.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image9.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image11.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image13.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image15.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image17.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image22.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+        </div>
+    </div>
+
+    <!-- Lower Line of Photos (Moving Right to Left) -->
+    <div class="relative overflow-hidden mt-8">
+        <div class="flex animate-slide-right">
+            <img src="image5.jpg" alt="Gallery 5" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image6.jpg" alt="Gallery 6" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image7.jpg" alt="Gallery 7" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image8.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image10.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image12.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image14.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image16.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image18.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image20.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image22.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+        </div>
+    </div>
+</section>
+
+
+<!-- Principal Section -->
+<section id="principal" class="py-12 px-6 bg-gray-100" data-aos="fade-up" data-aos-duration="1200">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-red-600 mb-4">प्राचार्यांचा संदेश</h2>
+        <p class="text-lg text-gray-700">Here is a message from our respected Principal.</p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-8 px-4">
+        <!-- Principal's Image -->
+        <div class="flex justify-center mb-8 lg:mb-0" animate-fade-in">
+            <img src="HM.jpg" alt="Principal" class="w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 rounded-full border-4 border-red-500 shadow-lg">
+        </div>
+
+        <!-- Principal's Message -->
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full lg:w-1/2" data-aos="fade-left" data-aos-duration="1200">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">आमच्या प्राचार्यांचे विचार</h3>
+            <p class="text-lg text-gray-700">
+                "माझ्या विद्यालयातील प्रत्येक विद्यार्थी ही आमच्या संस्थेची खरी संपत्ती आहे. त्यांना एक चांगला नागरिक, कुशल व्यक्तिमत्व आणि समाजाच्या भल्यासाठी कार्य करणारा बनवण्याचा आमचा प्रयत्न असतो. शिक्षण केवळ ज्ञान प्राप्तीचे माध्यम नाही, तर व्यक्तिमत्व विकासाचा एक अत्यंत महत्त्वाचा घटक आहे. या संस्थेचा अभिमान आहे की, ते असेच शिक्षण देण्याचा वचन घेत आहेत."
+            </p>
+            <p class="mt-4 text-gray-600">- प्राचार्य, कर्मवीर शंकररावजी काळे विद्यालय</p>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities -->
+<section id="facilities" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">
+                Our School Facilities
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Facility 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/400x250" alt="Library" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-700">State-of-the-Art Library</h3>
+                        <p class="text-gray-600 mt-2">Our library offers a vast collection of books, digital resources, and a quiet space for study.</p>
+                    </div>
+                </div>
+
+                <!-- Facility 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
+                    <img src="https://via.placeholder.com/400x250" alt="Science Lab" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-700">Modern Science Labs</h3>
+                        <p class="text-gray-600 mt-2">Our fully equipped science labs provide hands-on learning experiences for students.</p>
+                    </div>
+                </div>
+
+                <!-- Facility 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-left">
+                    <img src="image13.jpg" alt="Playground" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-700">प्रशस्त खेळाचे मैदान</h3>
+                        <p class="text-gray-600 mt-2">आमचा खेळाचा मैदान आधुनिक सुविधाांनी सुसज्ज आहे ज्यामुळे शारीरिक विकास आणि मजा सुनिश्चित केली जाते..</p>
+                    </div>
+                </div>
+
+                <!-- Facility 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-right">
+                    <img src="art.jpg" alt="Music Room" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-700">संगीत आणि कला</h3>
+                        <p class="text-gray-600 mt-2">विद्यार्थ्यांना त्यांच्या कलात्मक आणि संगीतात्मक कौशल्यांचा अन्वेषण आणि विकास करण्यासाठी एक सर्जनशील जागा..</p>
+                    </div>
+                </div>
+
+                <!-- Facility 5 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-up">
+                    <img src="computer.jpg" alt="Computer Lab" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-700">प्रगत संगणक प्रयोगशाळा</h3>
+                        <p class="text-gray-600 mt-2">आमची संगणक प्रयोगशाळा डिजिटल शिक्षणाला समर्थन देण्यासाठी अत्याधुनिक तंत्रज्ञानाने सुसज्ज आहे.</p>
+                    </div>
+                </div>
+
+                <!-- Facility 6 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-left">
+                    <img src="https://via.placeholder.com/400x250" alt="Auditorium" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-gray-700">पोषणतत्त्वयुक्त आहार</h3>
+                        <p class="text-gray-600 mt-2">विद्यार्थ्यांसाठी शारीरिक आणि मानसिक विकासासाठी पोषणतत्त्वांनी भरपूर आणि संतुलित आहार.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Staff Info Section -->
+<section id="staff" class="py-12 px-6 bg-white" data-aos="fade-up" data-aos-duration="1000">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-red-600 mb-4">Our Dedicated Staff</h2>
+        <p class="text-lg text-gray-700">Meet our passionate and hardworking teachers.</p>
+    </div>
+
+    <!-- Staff List -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Teacher 1 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="zhalte.jpg" alt="Teacher 1" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 1</h3>
+            <p class="text-sm text-gray-600">Mathematics</p>
+            <p class="text-sm text-gray-600">Years of Experience: 10</p>
+        </div>
+
+        <!-- Teacher 2 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="thaksal.jpg" alt="Teacher 2" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 2</h3>
+            <p class="text-sm text-gray-600">Science</p>
+            <p class="text-sm text-gray-600">Years of Experience: 8</p>
+        </div>
+
+        <!-- Teacher 3 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="chavan.jpg" alt="Teacher 3" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 3</h3>
+            <p class="text-sm text-gray-600">English</p>
+            <p class="text-sm text-gray-600">Years of Experience: 12</p>
+        </div>
+        <!-- Teacher 4 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="jagtap.jpg" alt="Teacher 4" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 4</h3>
+            <p class="text-sm text-gray-600">History</p>
+            <p class="text-sm text-gray-600">Years of Experience: 6</p>
+        </div>
+
+        <!-- Teacher 5 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="barde.jpg" alt="Teacher 4" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 5</h3>
+            <p class="text-sm text-gray-600">History</p>
+            <p class="text-sm text-gray-600">Years of Experience: 6</p>
+        </div>
+
+        <!-- Teacher 6 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="sangle.jpg" alt="Teacher 5" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 6</h3>
+            <p class="text-sm text-gray-600">Geography</p>
+            <p class="text-sm text-gray-600">Years of Experience: 5</p>
+        </div>
+
+        <!-- Teacher 7 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="dange.jpg" alt="Teacher 6" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 7</h3>
+            <p class="text-sm text-gray-600">Art</p>
+            <p class="text-sm text-gray-600">Years of Experience: 4</p>
+        </div>
+
+        <!-- Teacher 8 -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="pimple.jpg" alt="Teacher 7" class="w-32 h-32 rounded-full border-4 border-red-500 mb-4">
+            <h3 class="text-xl font-semibold text-gray-800">Teacher 8</h3>
+            <p class="text-sm text-gray-600">Physical Education</p>
+            <p class="text-sm text-gray-600">Years of Experience: 7</p>
+        </div>
+    </div>
+</section>
+
+<section id="committee" class="py-12 bg-gray-50" data-aos="fade-up" data-aos-duration="1200">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">School Committee</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Committee Member 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in">
+        <img src="member1.jpg" alt="Member 1" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <h3 class="text-xl font-semibold text-gray-700">मा. कारभारी मारुती पा.आगवन</h3>
+        <p class="text-gray-500">स्थानिक स्कूल कमिटी चेअरमन</p>
+        <p class="mt-4 text-sm text-gray-600">John brings 20 years of leadership experience in education and administration.</p>
+      </div>
+      <!-- Committee Member 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in animation-delay-1">
+        <img src="member2.jpg" alt="Member 2" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <h3 class="text-xl font-semibold text-gray-700">डॉ.सुनील वामनराव देसाई</h3>
+        <p class="text-gray-500">सदस्य स्थानिक स्कूलकमिटी</p>
+        <p class="mt-4 text-sm text-gray-600">Jane specializes in curriculum development and teacher training programs.</p>
+      </div>
+      <!-- Committee Member 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 animate-fade-in animation-delay-2">
+        <img src="member3.jpg" alt="Member 3" class="w-24 h-24 mx-auto rounded-full mb-4">
+        <h3 class="text-xl font-semibold text-gray-700">मा.सांडूभाई शेरखा पठाण </h3>
+        <p class="text-gray-500">सदस्य स्थानिक स्कूलकमिटी</p>
+        <p class="mt-4 text-sm text-gray-600">Mark ensures strong communication between parents and the school committee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1200">
+    <div class="container mx-auto px-6">
+        <!-- Title Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">प्रेरणा स्थान</h2>
+            <p class="text-lg text-gray-600 mt-4">Inspirational Leaders Who Shaped the Future</p>
+        </div>
+
+        <!-- Founder Cards Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Founder 1 -->
+            <div class="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100" data-aos="fade-right">
+                <img src="anna.jpg" alt="Founder 1" class="w-32 h-32 rounded-full mb-6 shadow-md">
+                <h4 class="text-2xl font-semibold text-gray-800 mb-2">कर्मवीर भाऊराव पाटील</h4>
+                <p class="text-gray-600 text-lg">शिक्षणाचे आधुनिक भगीरथ <br> (२२ सप्टेंबर १८८७ - ९ मे १९५९)</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">
+                    कर्मवीर भाऊराव पाटील हे महाराष्ट्रातील एक प्रसिद्ध समाजसेवक व शिक्षण क्षेत्रातील अग्रणी नेते होते. २२ नोव्हेंबर १८८७ रोजी अहमदनगर जिल्ह्यातील शिरूर तालुक्यातील कोपरगाव येथे जन्मलेल्या भाऊराव पाटील यांचा जीवन प्रवास समाजाच्या उत्थानासाठी समर्पित होता. त्यांचे प्राथमिक शिक्षण कोपरगाव आणि जवळच्या गावात झाले.
+                </p>
+            </div>
+            <!-- Founder 2 -->
+            <div class="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100" data-aos="fade-left">
+                <img src="mata.jpg" alt="Founder 3" class="w-32 h-32 rounded-full mb-6 shadow-md">
+                <h4 class="text-2xl font-semibold text-gray-800 mb-2">तिसरा संस्थापक</h4>
+                <p class="text-gray-600 text-lg">शिक्षणाची प्रेरणास्त्रोत<br> (७ जून १८९४ - २५ फेब्रुवारी १९३०)</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">
+                    लक्ष्मीबाई भाऊराव पाटील यांचे रयत शिक्षण संस्थेच्या जडणघडणीमध्ये अत्यंत महत्त्वपूर्ण योगदान होते. त्यांनी संस्थेच्या वसतिगृहात सर्व जाती आणि धर्मातील मुलांना समान संधी दिली आणि त्यांच्या पालनपोषणाची जबाबदारी घेतली. त्यांनी विद्यार्थ्यांच्या शिक्षणासोबतच, त्यांना आवश्यक असलेल्या आहार, देखभाल आणि सांस्कृतिक समावेशाची काळजी घेतली. त्यांच्या व्यक्तिमत्त्वाच्या बदलामुळे त्यांचे कर्मठपण कमी झाले आणि त्यांनी एकीकडे शाळेतील मुलांसाठी आणि दुसरीकडे आपल्या कुटुंबासाठी सर्वस्व अर्पण केले. त्यांच्या त्यागामुळे रयत शिक्षण संस्थेचे अस्तित्व मजबूत झाले आणि त्यांचे योगदान आजही शेकडो विद्यार्थ्यांच्या जीवनात चांगले परिणाम देत आहे.
+                </p>
+            </div>
+            <!-- Founder 3 -->
+            <div class="flex flex-col items-center text-center bg-white p-8 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100" data-aos="fade-up">
+                <img src="founder.jpg" alt="Founder 2" class="w-32 h-32 rounded-full mb-6 shadow-md">
+                <h4 class="text-2xl font-semibold text-gray-800 mb-2">शंकररावजी काळे साहेब</h4>
+                <p class="text-gray-600 text-lg">शिक्षण व सहकार क्षेत्रातील प्रणेते <br> (६ एप्रिल १९२१ - २८ फेब्रुवारी १९८९)</p>
+                <p class="text-gray-600 mt-4 text-base leading-relaxed">
+                    शंकररावजी काळे साहेब हे शिक्षण, सहकार, व समाजसेवेच्या माध्यमातून महाराष्ट्रातील विकासाच्या यशोगाथेचे एक प्रेरणादायी व्यक्तिमत्त्व आहे. कोपरगाव तालुक्यातील माहेगाव देशमुख या छोट्याशा खेड्यात ६ एप्रिल १९२१ रोजी एका सामान्य शेतकरी कुटुंबात जन्मलेल्या शंकरराव काळे यांनी आपल्या अथक परिश्रमाने सामान्य परिस्थितीतून असामान्य यश संपादन केले.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Footer Section -->
+<footer id="contact" class="relative bg-gray-200 text-gray-800 py-8 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-start gap-8">
+        <!-- Contact Details Section -->
+        <div class="flex-1" data-aos="fade-right" data-aos-duration="1000">
+            <h3 class="text-xl font-semibold mb-4 text-maroon-700">Contact Details</h3>
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-center">
+                    <span class="inline-block mr-3 text-red-600">📍</span>
+                    <p>Athani Rd, Shastri Nagar, Vijayapura, Karnataka 586102, India</p>
+                </li>
+                <li class="flex items-center">
+                    <span class="inline-block mr-3 text-blue-500">📧</span>
+                    <a href="mailto:pplssbj1963@gmail.com" class="hover:underline text-maroon-700">
+                        pplssbj1963@gmail.com
+                    </a>
+                </li>
+                <li class="flex items-center">
+                    <span class="inline-block mr-3 text-green-600">📞</span>
+                    +91 08352-270638
+                </li>
+                <li class="flex items-center">
+                    <span class="inline-block mr-3 text-yellow-500">📠</span>
+                    +91 08352-271560
+                </li>
+                <li class="flex items-center">
+                    <span class="inline-block mr-3 text-purple-500">🌐</span>
+                    <a href="http://www.ssbj.in" class="hover:underline text-maroon-700">
+                        www.ssbj.in
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Map Section -->
+        <div class="flex-1" data-aos="fade-left" data-aos-duration="1000">
+    <h3 class="text-xl font-semibold mb-4 text-maroon-700">Find Us on Map</h3>
+    <div class="w-full h-56 rounded-lg overflow-hidden shadow-lg border border-gray-700">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1234567890123!2d74.00345678901234!3d17.680123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1234567890abc%3A0xdef1234567890abc!2sRayat%20English%20Medium%20School%2C%20Satara!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Horizontal Divider and Copyright -->
+    <div class="mt-8 border-t border-gray-400 pt-4 text-center text-sm text-gray-600">
+        <p>&copy; 2024 कर्मवीर शंकररावजी काळे माध्यमिक विद्यालय, करंजी बु.. All rights reserved.</p>
+        <p>Designed by Shivam Sandip Chavan.</p>
+    </div>
+</footer>
+
+
+
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuItems = document.querySelectorAll('#mobile-menu a'); // Assuming menu items are <a> tags inside #mobile-menu
+
+// Toggle menu visibility on button click
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Hide menu on menu item click
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden'); // Ensure menu hides
+    });
+});
+    AOS.init({
+            duration: 1000, // Animation duration
+        });
+</script>
+
+</body>
+</html>
