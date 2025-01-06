@@ -74,33 +74,27 @@ nav.sticky {
     nav a:hover::after {
         width: 100%;
     }
-     @keyframes slideLeft {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+/* Keyframes for sliding animations */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
-  @keyframes slideRight {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
   }
+  100% {
+    transform: translateX(100%);
+  }
+}
 
-  /* Apply the animations to specific elements */
-  .animate-slide-left {
-    animation: slideLeft 25s linear infinite;
-  }
-
-  .animate-slide-right {
-    animation: slideRight 25s linear infinite;
-  }
-  @keyframes fade-in {
+/* Keyframes for fade-in animation */
+@keyframes fade-in {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -110,6 +104,55 @@ nav.sticky {
     transform: translateY(0);
   }
 }
+
+/* Sliding animations for gallery rows */
+.animate-slide-left {
+  animation: slideLeft 60s linear infinite; /* Slower animation */
+  animation-delay: 1s; /* Synchronize start time */
+}
+
+.animate-slide-right {
+  animation: slideRight 60s linear infinite; /* Slower animation */
+  animation-delay: 1s; /* Synchronize start time */
+}
+
+/* Fade-in animation for images */
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+/* Ensure rows enter the screen at the same time */
+.relative {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animate-slide-left,
+  .animate-slide-right {
+    animation-duration: 40s; /* Faster animation for smaller screens */
+  }
+
+  img {
+    width: 36px; /* Adjusted size for smaller devices */
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .animate-slide-left,
+  .animate-slide-right {
+    animation-duration: 30s; /* Further speed up on smaller screens */
+  }
+
+  img {
+    width: 24px; /* Further reduce size */
+    height: 24px;
+  }
+}
+
 .teacher-card {
         display: flex;
         flex-direction: column;
@@ -246,35 +289,77 @@ nav.sticky {
     <!-- Upper Line of Photos (Moving Left to Right) -->
     <div class="relative overflow-hidden">
         <div class="flex animate-slide-left">
+            <!-- Images 1 to 19 -->
             <img src="image1.jpg" alt="Gallery 1" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
             <img src="image2.jpg" alt="Gallery 2" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
             <img src="image3.jpg" alt="Gallery 3" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
             <img src="image4.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image19.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image7.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image9.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image11.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image13.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image15.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image17.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image22.jpg" alt="Gallery 4" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-        </div>
-    </div>
-
-    <!-- Lower Line of Photos (Moving Right to Left) -->
-    <div class="relative overflow-hidden mt-8">
-        <div class="flex animate-slide-right">
             <img src="image5.jpg" alt="Gallery 5" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
             <img src="image6.jpg" alt="Gallery 6" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
             <img src="image7.jpg" alt="Gallery 7" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
             <img src="image8.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image10.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image12.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image14.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image16.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image18.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image20.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
-            <img src="image22.jpg" alt="Gallery 8" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image9.jpg" alt="Gallery 9" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image10.jpg" alt="Gallery 10" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image11.jpg" alt="Gallery 11" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image12.jpg" alt="Gallery 12" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image13.jpg" alt="Gallery 13" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image14.jpg" alt="Gallery 14" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image15.jpg" alt="Gallery 15" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image16.jpg" alt="Gallery 16" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image17.jpg" alt="Gallery 17" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image18.jpg" alt="Gallery 18" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image19.jpg" alt="Gallery 19" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+        </div>
+    </div>
+
+    <!-- Middle Line of Photos (Moving Right to Left) -->
+    <div class="relative overflow-hidden mt-8">
+        <div class="flex animate-slide-right">
+            <!-- Images 20 to 37 -->
+            <img src="image20.jpg" alt="Gallery 20" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image21.jpg" alt="Gallery 21" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image22.jpg" alt="Gallery 22" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image23.jpg" alt="Gallery 23" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image24.jpg" alt="Gallery 24" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image25.jpg" alt="Gallery 25" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image26.jpg" alt="Gallery 26" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image27.jpg" alt="Gallery 27" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image28.jpg" alt="Gallery 28" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image29.jpg" alt="Gallery 29" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image30.jpg" alt="Gallery 30" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image31.jpg" alt="Gallery 31" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image32.jpg" alt="Gallery 32" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image33.jpg" alt="Gallery 33" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image34.jpg" alt="Gallery 34" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image35.jpg" alt="Gallery 35" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image36.jpg" alt="Gallery 36" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image37.jpg" alt="Gallery 37" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+        </div>
+    </div>
+
+    <!-- Lower Line of Photos (Moving Left to Right) -->
+    <div class="relative overflow-hidden mt-8">
+        <div class="flex animate-slide-left">
+            <!-- Images 38 to 56 -->
+            <img src="image38.jpg" alt="Gallery 38" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image39.jpg" alt="Gallery 39" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image40.jpg" alt="Gallery 40" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image41.jpg" alt="Gallery 41" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image42.jpg" alt="Gallery 42" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image43.jpg" alt="Gallery 43" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image44.jpg" alt="Gallery 44" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image45.jpg" alt="Gallery 45" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image46.jpg" alt="Gallery 46" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image47.jpg" alt="Gallery 47" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image48.jpg" alt="Gallery 48" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image49.jpg" alt="Gallery 49" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image50.jpg" alt="Gallery 50" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image51.jpg" alt="Gallery 51" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image52.jpg" alt="Gallery 52" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image53.jpg" alt="Gallery 53" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image54.jpg" alt="Gallery 54" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image55.jpg" alt="Gallery 55" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
+            <img src="image56.jpg" alt="Gallery 56" class="w-48 h-48 object-cover rounded-lg shadow-lg mx-2 transition duration-300 hover:scale-105 transform animate-fade-in">
         </div>
     </div>
 </section>
@@ -418,58 +503,58 @@ nav.sticky {
     <!-- Staff List -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Teacher Cards -->
-        <div class="teacher-card">
-            <img src="zhalte.jpg" alt="श्री देविदास सोपान झाल्टे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="zhalte.jpg" alt="श्री देविदास सोपान झाल्टे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री देविदास सोपान झाल्टे</h3>
             <p class="teacher-qualification">बी एस्सी बी एड</p>
             <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="thaksal.jpg" alt="श्री राधाकिसन कचरू टाकसाळ" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="thaksal.jpg" alt="श्री राधाकिसन कचरू टाकसाळ" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री राधाकिसन कचरू टाकसाळ</h3>
             <p class="teacher-qualification">बीए बीएड</p>
             <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="chavan.jpg" alt="श्री संदीप दिलीप चव्हाण" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="chavan.jpg" alt="श्री संदीप दिलीप चव्हाण" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री संदीप दिलीप चव्हाण</h3>
             <p class="teacher-qualification">ए एम ,जी डी आर्ट</p>
             <p class="teacher-role">उपशिक्षक</p>
             <p class="teacher-award">महाराष्ट्र शासन राज्य आदर्श शिक्षक पुरस्कार प्राप्त</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="jagtap.jpg" alt="श्री ललित प्रकाश जगताप" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="jagtap.jpg" alt="श्री ललित प्रकाश जगताप" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री ललित प्रकाश जगताप</h3>
             <p class="teacher-qualification">बीए डीएड</p>
             <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="barde.jpg" alt="श्री सिद्धार्थ विठ्ठलराव बरडे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="barde.jpg" alt="श्री सिद्धार्थ विठ्ठलराव बरडे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री सिद्धार्थ विठ्ठलराव बरडे</h3>
             <p class="teacher-qualification">बीएससी बीएड</p>
             <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="sangle.jpg" alt="श्री गजानन धोंडीबा सांगळे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="sangle.jpg" alt="श्री गजानन धोंडीबा सांगळे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री गजानन धोंडीबा सांगळे</h3>
             <p class="teacher-qualification">एम ए बी एड</p>
             <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="dange.jpg" alt="श्री सचिन शत्रुघ्न डांगे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="dange.jpg" alt="श्री सचिन शत्रुघ्न डांगे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री सचिन शत्रुघ्न डांगे</h3>
             <p class="teacher-qualification">एम ए बी एड (सेट)</p>
             <p class="teacher-role">उपशिक्षक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="pimple.jpg" alt="श्री सुनील रामराव पिंपळे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="pimple.jpg" alt="श्री सुनील रामराव पिंपळे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री सुनील रामराव पिंपळे</h3>
             <p class="teacher-qualification">डी एड</p>
             <p class="teacher-role">उपशिक्षक</p>
@@ -482,21 +567,22 @@ nav.sticky {
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Non-Teaching Staff -->
-        <div class="teacher-card">
-            <img src="sarode.jpg" alt="श्री अनिल विष्णुपंत सरोदे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="sarode.jpg" alt="श्री अनिल विष्णुपंत सरोडे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री अनिल विष्णुपंत सरोदे</h3>
             <p class="teacher-qualification">बी ए</p>
             <p class="teacher-role">वरिष्ठ लिपिक</p>
         </div>
 
-        <div class="teacher-card">
-            <img src="gavanath.jpg" alt="श्री गवनाथ सिताराम डोखे" class="teacher-img">
+        <div class="teacher-card text-center">
+            <img src="gavanath.jpg" alt="श्री गवनाथ सिताराम डोखे" class="teacher-img mx-auto">
             <h3 class="teacher-name">श्री गवनाथ सिताराम डोखे</h3>
             <p class="teacher-qualification">एस एस सी</p>
             <p class="teacher-role">शिपाई</p>
         </div>
     </div>
 </section>
+
 
 <section id="principal" class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1200">
     <div class="container mx-auto px-6">
