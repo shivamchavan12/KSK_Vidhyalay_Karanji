@@ -30,7 +30,7 @@ The website serves as the official online presence of KSK Vidhyalay Karanji, fea
 ## 🌐 Live Demo
 
 Access the live site here:  
-🔗 [Live Website on Vercel](https://your-vercel-project-url.vercel.app)  
+🔗 [Live Website on Vercel](https://ksk-vidhyalay-karanji.vercel.app)  
 *(Replace with actual deployed URL)*
 
 ---
